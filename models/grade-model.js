@@ -17,10 +17,11 @@
 import mongoose from "mongoose";
 
 const gradesSchema = new mongoose.Schema({
-    learner_id: {
-        type: Number,
-        required: true
-    },
+    // learner_id: {
+    //     type: Number,
+    //     required: true,
+    //     alias: "student_id"
+    // },
     class_id: {
         type: Number,
         required: true
@@ -33,6 +34,11 @@ const gradesSchema = new mongoose.Schema({
             
         score: Number
     }],
+    student_id: {
+        type: Number,
+        required: true,
+        alias: "learner_id"
+    },
 
     
 

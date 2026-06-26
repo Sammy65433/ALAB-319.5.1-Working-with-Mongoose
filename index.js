@@ -4,7 +4,7 @@ import 'dotenv/config';
 import express from "express";
 import connectDB from './db/conn.js'
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const app = express();
 
 import grades from "./routes/grades.js";
