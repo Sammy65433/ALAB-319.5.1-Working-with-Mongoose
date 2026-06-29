@@ -168,7 +168,7 @@ router.get("/class/:id", async (req, res) => {
   };
 
   // Check for learner_id parameter
-  if (req.query.learner) query.learner_id = req.query.learner;
+  if (req.query.learner) query.learner_id = Number(req.query.learner);
 
   let result = await Grade.find(query)
   // .toArray();
